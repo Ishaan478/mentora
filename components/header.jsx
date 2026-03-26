@@ -1,5 +1,5 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
-import { ChevronDown, ClipboardCheck, FileText, GraduationCap, LayoutDashboard, PenBox, Phone, StarsIcon } from 'lucide-react';
+import { Brain, ChevronDown, ClipboardCheck, FileText, GraduationCap, LayoutDashboard, PenBox, Phone, StarsIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from "next/link";
 import { Button } from './ui/button';
@@ -63,10 +63,10 @@ const Header = async () => {
                         <DropdownMenu>
 
                             <DropdownMenuTrigger asChild>
-                                <Button className=" text-white">
+                                <Button className="bg-blue-200" >
                                     <span className="flex items-center gap-2">
                                         <StarsIcon className="h-4 w-4" />
-                                        <span className="hidden md:block">Growth Tools</span>
+                                        <span className="hidden md:block ">Growth Tools</span>
                                         <ChevronDown className="h-4 w-4" />
                                     </span>
                                 </Button>
@@ -74,7 +74,7 @@ const Header = async () => {
 
                             <DropdownMenuContent
                                 align="end"
-                                className="w-48 bg-white/95 backdrop-blur-md border border-gray-200 shadow-xl rounded-lg z-50"
+                                className="w-48 bg-gray-900 border border-gray-700 shadow-xl rounded-lg z-50 text-white"
                             >
 
                                 <DropdownMenuItem asChild>
@@ -115,7 +115,19 @@ const Header = async () => {
                                         <span>Join an Interview call</span>
                                     </Link>
                                 </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link
+                                        href="/skill-gap"
+                                        className="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        <Brain className="h-4 w-4" />
+                                        <span>Skill Gap Analyser</span>
+                                    </Link>
+                                </DropdownMenuItem>
+
+
                             </DropdownMenuContent>
+
                         </DropdownMenu>
                     </SignedIn>
 
